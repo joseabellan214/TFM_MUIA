@@ -1,0 +1,7 @@
+# Entornos virtuales
+venv/
+tft-env/
+
+# Archivos grandes
+*.zip
+*.tar.gz
