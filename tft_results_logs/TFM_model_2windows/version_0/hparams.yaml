@@ -1,0 +1,409 @@
+attention_head_size: 2
+categorical_groups: {}
+causal_attention: true
+dropout: 0.3
+embedding_labels:
+  is_ocean:
+    land: 0
+    ocean: 1
+  location_id:
+    '0': 0
+    '1': 1
+    '10': 2
+    '100': 3
+    '101': 4
+    '102': 5
+    '103': 6
+    '104': 7
+    '105': 8
+    '106': 9
+    '107': 10
+    '108': 11
+    '109': 12
+    '11': 13
+    '110': 14
+    '111': 15
+    '112': 16
+    '113': 17
+    '114': 18
+    '115': 19
+    '116': 20
+    '117': 21
+    '118': 22
+    '119': 23
+    '12': 24
+    '120': 25
+    '121': 26
+    '122': 27
+    '123': 28
+    '124': 29
+    '125': 30
+    '126': 31
+    '127': 32
+    '128': 33
+    '129': 34
+    '13': 35
+    '130': 36
+    '131': 37
+    '132': 38
+    '133': 39
+    '134': 40
+    '14': 41
+    '15': 42
+    '16': 43
+    '17': 44
+    '18': 45
+    '19': 46
+    '2': 47
+    '20': 48
+    '21': 49
+    '22': 50
+    '23': 51
+    '24': 52
+    '25': 53
+    '26': 54
+    '27': 55
+    '28': 56
+    '29': 57
+    '3': 58
+    '30': 59
+    '31': 60
+    '32': 61
+    '33': 62
+    '34': 63
+    '35': 64
+    '36': 65
+    '37': 66
+    '38': 67
+    '39': 68
+    '4': 69
+    '40': 70
+    '41': 71
+    '42': 72
+    '43': 73
+    '44': 74
+    '45': 75
+    '46': 76
+    '47': 77
+    '48': 78
+    '49': 79
+    '5': 80
+    '50': 81
+    '51': 82
+    '52': 83
+    '53': 84
+    '54': 85
+    '55': 86
+    '56': 87
+    '57': 88
+    '58': 89
+    '59': 90
+    '6': 91
+    '60': 92
+    '61': 93
+    '62': 94
+    '63': 95
+    '64': 96
+    '65': 97
+    '66': 98
+    '67': 99
+    '68': 100
+    '69': 101
+    '7': 102
+    '70': 103
+    '71': 104
+    '72': 105
+    '73': 106
+    '74': 107
+    '75': 108
+    '76': 109
+    '77': 110
+    '78': 111
+    '79': 112
+    '8': 113
+    '80': 114
+    '81': 115
+    '82': 116
+    '83': 117
+    '84': 118
+    '85': 119
+    '86': 120
+    '87': 121
+    '88': 122
+    '89': 123
+    '9': 124
+    '90': 125
+    '91': 126
+    '92': 127
+    '93': 128
+    '94': 129
+    '95': 130
+    '96': 131
+    '97': 132
+    '98': 133
+    '99': 134
+  season:
+    autumn: 0
+    spring: 1
+    summer: 2
+    winter: 3
+embedding_paddings: []
+embedding_sizes:
+  is_ocean: !!python/tuple
+  - 2
+  - 1
+  location_id: !!python/tuple
+  - 135
+  - 25
+  season: !!python/tuple
+  - 4
+  - 3
+hidden_continuous_size: 16
+hidden_continuous_sizes: {}
+hidden_size: 128
+learning_rate: 0.02
+log_gradient_flow: false
+log_interval: 1
+log_val_interval: null
+lstm_layers: 1
+max_encoder_length: 50
+monotone_constaints: {}
+optimizer: ranger
+optimizer_params: null
+output_size: 3
+output_transformer: !!python/object:pytorch_forecasting.data.encoders.GroupNormalizer
+  center: true
+  groups:
+  - location_id
+  method: standard
+  missing_:
+    center: 16.257939805971766
+    scale: 4.940048656674395
+  norm_: !!python/object:pandas.core.frame.DataFrame
+    _flags:
+      allows_duplicate_labels: true
+    _metadata: []
+    _mgr: !!python/object/apply:pandas.core.internals.managers.BlockManager
+    - !!python/tuple
+      - !!python/object/apply:pandas._libs.internals._unpickle_block
+        - !!python/object/apply:numpy.core.multiarray._reconstruct
+          args:
+          - &id001 !!python/name:numpy.ndarray ''
+          - !!python/tuple
+            - 0
+          - !!binary |
+            Yg==
+          state: !!python/tuple
+          - 1
+          - !!python/tuple
+            - 2
+            - 135
+          - !!python/object/apply:numpy.dtype
+            args:
+            - f8
+            - false
+            - true
+            state: !!python/tuple
+            - 3
+            - <
+            - null
+            - null
+            - null
+            - -1
+            - -1
+            - 0
+          - false
+          - !!binary |
+            IVaUxlutLUCYCkVOD7YuQI6qoeMWsS5AouM+aCv6LEDM93cFGFglQLwdLeyhOi9AWBtwmB2KMEAL
+            e/itit8yQPFACip2YjNAQQoq+al1M0AmmpHu0UozQBD1n1wzYChAV+XFERABLEC8HS3sK4kvQLSw
+            h9+GACZAK2U4Z6YiLEAxMN/fKIQyQHgFsFE3VzNAI909FxCOM0AqFDmdHFIzQBnOmXZ0/jFA/fGs
+            XmGhJEBOJyE7/+QmQFJQyR8T1ixAPvzWVwhCMECwNuAwTgUwQCrejhZZqTJAFtubGPsRM0AgBZX8
+            hJEzQCE7P4N55TJAVNdycF05MkDrkLj0+NQlQA0d90FxdylADLGiNEmeMECL0vjIznExQE7xdrRj
+            0TBA0qfJOnmKMkASsvMzaTMzQOLSEx5ZkDNAYIgVpcRpMkD3JgbmSsMyQAmjT5NbUDFAlmhGurvJ
+            MUBGhNGnETkyQOXFEXzcrTJA2i/EiqyqLUDGLNGMOJQuQExPeCAHvC9AfbUBh09ML0DUScjOpi8w
+            QAc3+4XvxDBAKajkjzQ/MUBxzrTLD7YxQN/EwHyILjJA9DMIiKuzMkAt0Yx0aawtQCaake4keS5A
+            vr8rgCe7LkD/yVV54FIwQEOsKI317y9ASxnOmdB9MED3QVspOakwQBErSuOoQzFAPhcsm1b4MUA+
+            /NZXZ7oyQHI6CdlTsi1A+v6uALZtLkBCWynDiz8sQKuh4z7SnyxAMN/fFaDaMEAwqTWPiY8uQIUi
+            p5PBpTBAmUDv1JwjMUCWaEa62eExQJqsQ+LR6DJAuSovjuK4LUAygd6p6Y0uQLBRNXT+kChArq82
+            4C6KKUDlj2f15M8sQJLunguBWzFAWDbF2/IpMUAEKajksbcxQMjOzyD1rTJABZX88YIrM0D7T67K
+            m9MtQD4XLJsuxy5A4DAVimKHJkDCzX4h7g0qQIS2UobVGixAZlO8HWlPMUBGnybru88xQOzGYnv5
+            kjFA38TAfMzAMkBn2mVuUWwyQD4ygd49Ci5AwZfUmtsqL0BbKcM5VXAnQDEVipxQMypAcc60y2xG
+            K0ATzUh3OG4wQHI6CdmwGDJAjXT3XLM/MkCr143FjcYxQBnOmXZbKzJArwA2qpA7LkCJZqS7iWQv
+            QKwojY9kmClARrp7LngIKEAEX1JrFKAsQGJFaXyeIjBAyM7PIEvwMECCFFTyoE4xQBtVQ8dFuzJA
+            f1cAGwvTMkDGEXxJOyguQITRp8mygy9A8pEJ9MJGK0CCFFTyMx0pQA5TocgpwClAnp9BQJ6OLkCa
+            ke6enZ8uQPnjWb1LczJAXgFsVEVLM0CtQ+LSQ7AtQI8W9vC3tSxAJ+uQuMD5LUD541m9SGspQHTB
+            silQxC5AFVTyx1EiKUDYjcX2jAkwQBhH8CU7fTJAzNwiwutsM0BJrXmMZDAzQPdcsGz+AytAcOe+
+            BTy5BUC8AP3vtQoGQMhjR89PRAZAEwPKD0tMG0A8Prfe/FwaQCk3ctpTDR5AtrLhKuO1GECnBo5W
+            19sUQEaYBSicDxNAe8bLE2mlEUDLFLeGf0cbQP1/WDsojBpAMdqBBw3zG0CwDX8wO9AFQCSYBh0K
+            nhpAv5rK60gJG0C9S1chNOUUQCECSQUjHxRAnunQdja4EkBZ6Pm/UHAUQEAu3iKQ6B9A8F0J56PS
+            GkAV7bH0OdUaQKIi6UQ1xxlAeGKbDkF7BUDZfDiUdPoWQI6fNegGXBRAFO27QKylFECV69VyVNMS
+            QLixPB3kGRZA+baGfagGIUCTZqYyAVUcQHjYdPdoihtAHLPU8viJFEC9p0QgqFUTQOBYTFO1NwVA
+            0OwC5REAFEDTQnQdnMITQMOUlYbHDhNAYWLpXyuJGEBoefnui1MhQLhp6oxUwgRAuC3MDgAJBECM
+            3n3OLXQDQJ5cgiys5wJABF9z84KUBkCamdr/RXMGQBJligPrAwZAsMYEVt+DBUD+TZF62w4FQDyl
+            o+52zARAcCUTurFfBEBwWeuRP5EDQPxPTzPz/gJApghhfMybAkAuAekhiCQHQOBMKHy1wAZA1oNr
+            +F6SBEBk8Ga1Y9YFQEblVcueNQRAqqd8u5rnA0AwKJJeW+0DQAJrqpfkUgJAYsWPVn4WAkCyrShq
+            zZICQNZR9xzJ2QdA0l3NTOKgB0CynGIRKhcQQOfMv0+KWhFA0j/jQ/KQBUCxEZ1mHjQRQF/+LZxO
+            KhRAx5MLU9D8EUCI8lRULsoGQKDPMmXlCARATADVKAjcCEAILKlbCNgJQEkyiYSWDRRATjH5JI92
+            GEDXLsoaj8IZQLpfRDWv8ARAnZy35cSwGkCWrSR8YJIZQJBPBi79lw1AKgaT0qgUB0CkV32YjVEK
+            QJQD7mhDMgtAQB53w0TZFUB7It1X/NMbQJe61pjNiRxAdcGHdky1HUDkhQ1cGWsEQONOtdBpyBtA
+            AOJfG5UcFUAsnND0JOAPQNZ9mOG1IQxAjKjiHHkNDUDblKJpBPAVQEa+ndJ+zBxAdwXhGAAHHkDd
+            xY4tpGsfQHLZPTlbNR5AGh7czS7TA0C1gio2bUcVQK9WgFyQQhFACNFslmN0DkAg+ZkSUAIPQH2p
+            09RpoRVAzp1UIzb1HEBrNjuhTB8fQPyTMPqsSSBAjXnQIfPrH0Ag4HeKrYwVQO69h7FlSwNAgFsx
+            SYOXEEBNzVlfEecQQL+LhsNExxBAEQLbzxLkFUBVzc/eBcccQEqwyrvz0R5AXa4TqR5QH0AGwHcU
+            PxAdQBHUNu0r5hNAhDNhFM8EEUBiCaNhvxsGQNIAdd4VGhdAylSHWssoF0AgiIEVl0MZQA3/ZVve
+            uh1Ao6weBU7DHEAs10SiX6IbQN79tmHPhRdAKiPGn4NiEUDt/SuAqwEVQD+1e8x+KBpA
+        - !!python/object/apply:builtins.slice
+          - 0
+          - 2
+          - 1
+        - 2
+    - - !!python/object/apply:pandas.core.indexes.base._new_Index
+        - !!python/name:pandas.core.indexes.base.Index ''
+        - data: !!python/object/apply:numpy.core.multiarray._reconstruct
+            args:
+            - *id001
+            - !!python/tuple
+              - 0
+            - !!binary |
+              Yg==
+            state: !!python/tuple
+            - 1
+            - !!python/tuple
+              - 2
+            - !!python/object/apply:numpy.dtype
+              args:
+              - O8
+              - false
+              - true
+              state: !!python/tuple
+              - 3
+              - '|'
+              - null
+              - null
+              - null
+              - -1
+              - -1
+              - 63
+            - false
+            - - center
+              - scale
+          name: null
+      - !!python/object/apply:pandas.core.indexes.base._new_Index
+        - !!python/name:pandas.core.indexes.numeric.Int64Index ''
+        - data: !!python/object/apply:numpy.core.multiarray._reconstruct
+            args:
+            - *id001
+            - !!python/tuple
+              - 0
+            - !!binary |
+              Yg==
+            state: !!python/tuple
+            - 1
+            - !!python/tuple
+              - 135
+            - !!python/object/apply:numpy.dtype
+              args:
+              - i8
+              - false
+              - true
+              state: !!python/tuple
+              - 3
+              - <
+              - null
+              - null
+              - null
+              - -1
+              - -1
+              - 0
+            - false
+            - !!binary |
+              AAAAAAAAAAABAAAAAAAAAAIAAAAAAAAAAwAAAAAAAAAEAAAAAAAAAAUAAAAAAAAABgAAAAAAAAAH
+              AAAAAAAAAAgAAAAAAAAACQAAAAAAAAAKAAAAAAAAAAsAAAAAAAAADAAAAAAAAAANAAAAAAAAAA4A
+              AAAAAAAADwAAAAAAAAAQAAAAAAAAABEAAAAAAAAAEgAAAAAAAAATAAAAAAAAABQAAAAAAAAAFQAA
+              AAAAAAAWAAAAAAAAABcAAAAAAAAAGAAAAAAAAAAZAAAAAAAAABoAAAAAAAAAGwAAAAAAAAAcAAAA
+              AAAAAB0AAAAAAAAAHgAAAAAAAAAfAAAAAAAAACAAAAAAAAAAIQAAAAAAAAAiAAAAAAAAACMAAAAA
+              AAAAJAAAAAAAAAAlAAAAAAAAACYAAAAAAAAAJwAAAAAAAAAoAAAAAAAAACkAAAAAAAAAKgAAAAAA
+              AAArAAAAAAAAACwAAAAAAAAALQAAAAAAAAAuAAAAAAAAAC8AAAAAAAAAMAAAAAAAAAAxAAAAAAAA
+              ADIAAAAAAAAAMwAAAAAAAAA0AAAAAAAAADUAAAAAAAAANgAAAAAAAAA3AAAAAAAAADgAAAAAAAAA
+              OQAAAAAAAAA6AAAAAAAAADsAAAAAAAAAPAAAAAAAAAA9AAAAAAAAAD4AAAAAAAAAPwAAAAAAAABA
+              AAAAAAAAAEEAAAAAAAAAQgAAAAAAAABDAAAAAAAAAEQAAAAAAAAARQAAAAAAAABGAAAAAAAAAEcA
+              AAAAAAAASAAAAAAAAABJAAAAAAAAAEoAAAAAAAAASwAAAAAAAABMAAAAAAAAAE0AAAAAAAAATgAA
+              AAAAAABPAAAAAAAAAFAAAAAAAAAAUQAAAAAAAABSAAAAAAAAAFMAAAAAAAAAVAAAAAAAAABVAAAA
+              AAAAAFYAAAAAAAAAVwAAAAAAAABYAAAAAAAAAFkAAAAAAAAAWgAAAAAAAABbAAAAAAAAAFwAAAAA
+              AAAAXQAAAAAAAABeAAAAAAAAAF8AAAAAAAAAYAAAAAAAAABhAAAAAAAAAGIAAAAAAAAAYwAAAAAA
+              AABkAAAAAAAAAGUAAAAAAAAAZgAAAAAAAABnAAAAAAAAAGgAAAAAAAAAaQAAAAAAAABqAAAAAAAA
+              AGsAAAAAAAAAbAAAAAAAAABtAAAAAAAAAG4AAAAAAAAAbwAAAAAAAABwAAAAAAAAAHEAAAAAAAAA
+              cgAAAAAAAABzAAAAAAAAAHQAAAAAAAAAdQAAAAAAAAB2AAAAAAAAAHcAAAAAAAAAeAAAAAAAAAB5
+              AAAAAAAAAHoAAAAAAAAAewAAAAAAAAB8AAAAAAAAAH0AAAAAAAAAfgAAAAAAAAB/AAAAAAAAAIAA
+              AAAAAAAAgQAAAAAAAACCAAAAAAAAAIMAAAAAAAAAhAAAAAAAAACFAAAAAAAAAIYAAAAAAAAA
+          name: location_id
+    _typ: dataframe
+    attrs: {}
+  scale_by_group: false
+  transformation: null
+reduce_on_plateau_min_lr: 1.0e-05
+reduce_on_plateau_patience: 2
+reduce_on_plateau_reduction: 2.0
+share_single_variable_networks: false
+static_categoricals:
+- is_ocean
+- location_id
+static_reals:
+- lat
+- lon
+time_varying_categoricals_decoder:
+- season
+time_varying_categoricals_encoder:
+- season
+time_varying_reals_decoder:
+- time_idx_norm
+- year
+- dayofyear_sin
+- dayofyear_cos
+- month_sin
+- month_cos
+time_varying_reals_encoder:
+- time_idx_norm
+- year
+- dayofyear_sin
+- dayofyear_cos
+- month_sin
+- month_cos
+- 2t
+- PC1
+- PC2
+- PC3
+- PC4
+- PC5
+- PC6
+- PC7
+- PC8
+- PC9
+- PC10
+- PC11
+weight_decay: 0.0
+x_categoricals:
+- is_ocean
+- location_id
+- season
+x_reals:
+- lat
+- lon
+- time_idx_norm
+- year
+- dayofyear_sin
+- dayofyear_cos
+- month_sin
+- month_cos
+- 2t
+- PC1
+- PC2
+- PC3
+- PC4
+- PC5
+- PC6
+- PC7
+- PC8
+- PC9
+- PC10
+- PC11
